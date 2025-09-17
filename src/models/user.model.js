@@ -9,6 +9,10 @@ const userschema = new Schema({
   role: { type: String, required: true },
   username: { type: String, required: true },
   refreshtoken: { type: String},
+  descryption:{type:String, default:""},
+  college:{type:String},
+  isEmployed:{type:Boolean,required:true},
+  company:{type:String}
 },{timestamps:true});
 
 userschema.pre("save", async function (next) {
